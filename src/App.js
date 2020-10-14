@@ -16,13 +16,13 @@ export default function App() {
         <br />
         <Link to="/headertags">header tags</Link>
         <br />
-        <Link to="/inputtags">input tags</Link>
+        <Link to="/paragraphtags">paragraph tags</Link>
         <br />
         <Link to="/imgtags">image tags</Link>
         <br />
         <Link to="/videotags">video tags</Link>
         <br />
-        <Link to="/paragraphtags">paragraph tags</Link>
+        <Link to="/inputtags">input tags</Link>
       </div>
       <Switch>
         <Route path="/headertags" component={HeaderTag} />
