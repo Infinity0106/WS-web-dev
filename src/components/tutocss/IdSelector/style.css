@@ -1,0 +1,20 @@
+#about-div {
+  background-color: red;
+  color: white;
+}
+
+#about-div > p {
+  background-color: rgb(240, 120, 120);
+  color: rgb(255, 255, 255);
+}
+
+/* div{
+  color:saddlebrown;
+  font-size: 10px;
+  background-color: antiquewhite;
+  margin: 0 auto;
+  padding: 10px;
+  position: absolute;
+  left:0;
+  right: 10px;
+} */
