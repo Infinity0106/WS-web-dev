@@ -1,6 +1,8 @@
 import React from "react";
 import "./styles.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "antd/dist/antd.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// imports for tutorail
 import InputTag from "./components/tutohtml/InputTag";
 import ImgTag from "./components/tutohtml/ImgTag";
 import VideoTag from "./components/tutohtml/VideoTag";
@@ -9,33 +11,26 @@ import ParagraphTag from "./components/tutohtml/ParagraphTag";
 import IdSelector from "./components/tutocss/IdSelector";
 import ElementSelector from "./components/tutocss/ElementSelector";
 import ClassSelector from "./components/tutocss/ClassSelector";
+import ReactiveCounter from "./components/reactivecounter";
+
+import Menu from "./components/menu";
+
+// imports for app
+import NavMenu from "./components/NavMenu";
+import AppFeed from "./components/AppFeed";
+import AddPost from "./components/AddPost";
 
 export default function App() {
   return (
     <Router>
       <div className="App">
-        <h1>Welcome To The WebDev WorkShop</h1>
-        <Link to="/">home</Link>
-        <br />
-        <h6>HTML</h6>
-        <Link to="/headertags">header tags</Link>
-        <br />
-        <Link to="/paragraphtags">paragraph tags</Link>
-        <br />
-        <Link to="/imgtags">image tags</Link>
-        <br />
-        <Link to="/videotags">video tags</Link>
-        <br />
-        <Link to="/inputtags">input tags</Link>
-        <br />
-        <h6>CSS</h6>
-        <Link to="/css/elementselector">element selector</Link>
-        <br />
-        <Link to="/css/idselector">id selector</Link>
-        <br />
-        <Link to="/css/classselector">class selector</Link>
+        <Menu />
+        <NavMenu />
       </div>
       <Switch>
+        <Route path="/app/post/:id?/:edit?" component={AddPost} />
+        <Route path="/app" component={AppFeed} />
+        <Route path="/react/counter" component={ReactiveCounter} />
         <Route path="/css/idselector" component={IdSelector} />
         <Route path="/css/elementselector" component={ElementSelector} />
         <Route path="/css/classselector" component={ClassSelector} />
